@@ -15,7 +15,6 @@ Group:		Development/Perl
 BuildRequires:	perl-devel
 %endif
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This module provides a convenient way to perform cleanup or other forms of
