@@ -6,7 +6,7 @@
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
-Summary:	lexically scoped resource management 
+Summary:	Lexically scoped resource management 
 URL:		http://search.cpan.org/dist/%{module}
 Source:		http://www.cpan.org/modules/by-module/Scope/%{module}-%{version}.tar.bz2
 License:	GPL
