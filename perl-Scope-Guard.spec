@@ -1,21 +1,21 @@
-%define module	Scope-Guard
-%define name	perl-%{module}
-%define version 0.03
-%define release %mkrel 4
+%define upstream_name	 Scope-Guard
+%define upstream_version 0.03
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Lexically scoped resource management 
-URL:		http://search.cpan.org/dist/%{module}
-Source:		http://www.cpan.org/modules/by-module/Scope/%{module}-%{version}.tar.bz2
 License:	GPL
 Group:		Development/Perl
+URL:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Scope/%{upstream_name}-%{upstream_version}.tar.bz2
+
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module provides a convenient way to perform cleanup or other forms of
@@ -26,7 +26,7 @@ aborted prematurely. This effectively allows lexically-scoped "promises" to be
 made that are automatically honoured by perl's garbage collector.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -45,4 +45,3 @@ made that are automatically honoured by perl's garbage collector.
 %doc Changes README
 %{perl_vendorlib}/Scope
 %{_mandir}/*/*
-
