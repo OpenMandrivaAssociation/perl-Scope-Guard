@@ -1,9 +1,9 @@
 %define upstream_name	 Scope-Guard
-%define upstream_version 0.12
+%define upstream_version 0.20
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:	Lexically scoped resource management 
 License:	GPL
