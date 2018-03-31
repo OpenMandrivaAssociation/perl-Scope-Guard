@@ -1,10 +1,10 @@
 %define modname	Scope-Guard
-%define modver	0.20
+%define modver	0.21
 
 Summary:	Lexically scoped resource management 
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	15
+Release:	1
 License:	GPLv2
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
