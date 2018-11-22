@@ -4,10 +4,10 @@
 Summary:	Lexically scoped resource management 
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	2
+Release:	3
 License:	GPLv2
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{modname}
+Url:		http://metacpan.org/pod/Scope::Guard
 Source0:	http://www.cpan.org/modules/by-module/Scope/%{modname}-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Test::More)
