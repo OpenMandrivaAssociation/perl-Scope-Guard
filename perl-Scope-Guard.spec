@@ -4,7 +4,7 @@
 Summary:	Lexically scoped resource management 
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	3
+Release:	4
 License:	GPLv2
 Group:		Development/Perl
 Url:		http://metacpan.org/pod/Scope::Guard
@@ -22,7 +22,7 @@ aborted prematurely. This effectively allows lexically-scoped "promises" to be
 made that are automatically honoured by perl's garbage collector.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{modver}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
