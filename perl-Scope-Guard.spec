@@ -4,7 +4,7 @@
 Summary:	Lexically scoped resource management 
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	4
+Release:	5
 License:	GPLv2
 Group:		Development/Perl
 Url:		http://metacpan.org/pod/Scope::Guard
