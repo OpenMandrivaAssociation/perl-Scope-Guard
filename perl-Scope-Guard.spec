@@ -1,14 +1,13 @@
 %define modname	Scope-Guard
-%define modver	0.21
 
 Summary:	Lexically scoped resource management 
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	8
+Version:	0.21
+Release:	1
 License:	GPLv2
 Group:		Development/Perl
 Url:		https://metacpan.org/pod/Scope::Guard
-Source0:	http://www.cpan.org/modules/by-module/Scope/%{modname}-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Scope/%{modname}-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl-devel
@@ -22,20 +21,19 @@ aborted prematurely. This effectively allows lexically-scoped "promises" to be
 made that are automatically honoured by perl's garbage collector.
 
 %prep
-%autosetup -p1 -n %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{version}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
-%make
+%make_build
 
 %check
 %make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc Changes README
 %{perl_vendorlib}/Scope
 %{_mandir}/man3/*
-
